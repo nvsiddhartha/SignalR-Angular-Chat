@@ -124,3 +124,6 @@ img {
 .msg_history {
   overflow-y: auto;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

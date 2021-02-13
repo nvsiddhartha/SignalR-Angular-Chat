@@ -1,0 +1,42 @@
+<h3>Angular Material Select Demo</h3>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+<!--   <mat-form-field>
+    <input matInput placeholder="Enter name" formControlName="name">
+    <mat-error *ngIf="name.hasError('required')">
+      Username is required.
+    </mat-error>
+  </mat-form-field> -->
+  <br/>
+  <br/>
+<!--   <mat-form-field>
+    <mat-label>Select a profile</mat-label>
+    <mat-select formControlName="profile">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let prf of allProfiles" [value]="prf">
+        {{ prf.name }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="profile.hasError('required')">
+      Profile is required.
+    </mat-error>
+  </mat-form-field> -->
+  <br/>
+  <br/>
+  <mat-form-field>
+    <mat-label>Select skills</mat-label>
+    <mat-select multiple formControlName="skills">
+      <mat-option *ngFor="let skill of (allSkills$ | async)" [value]="skill">
+        {{skill.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="skills.hasError('required')">
+      Skill is required.
+    </mat-error>
+  </mat-form-field>
+  <br/>
+  <br/>
+  <button mat-raised-button>Submit</button>
+  <button mat-raised-button type="button" (click)="setDefault()">Default Value</button>
+  <button mat-raised-button type="button" (click)="setDefaultSkills()">Default Skills</button>
+  <button mat-raised-button type="button" (click)="resetForm()">Reset</button>
+</form>
