@@ -5,3 +5,4 @@
 # @angular/core: ~8.2.14
 # @aspnet/signalr: ^1.1.4
 # rxjs: ~6.4.0
+# This is a sample SignalR project
